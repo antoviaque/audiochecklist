@@ -1,1 +1,4 @@
 *~
+*.swp
+/google-api-auth-text2speech.json
+/audiochecklist.cfg

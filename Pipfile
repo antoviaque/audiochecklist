@@ -4,8 +4,17 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+google-cloud-texttospeech = "*"
+Kivy = "*"
+buildozer = "*"
+Cython = "*"
+virtualenv = "*"
+todoist-python = "*"
 
 [dev-packages]
 
 [requires]
 python_version = "3.7"
+
+[packages.9eacacf]
+file = "https://github.com/matham/ffpyplayer/archive/master.zip"

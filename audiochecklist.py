@@ -33,14 +33,6 @@ class AudioChecklistApp(App):
         self.sound = None
         self.checklist_items = self.get_checklist_items()
 
-    def intro_wizard(self):
-        """
-        TODO: Initial welcome screen, with wizard to setup
-        """
-        intro_text = "Welcome to AudioChecklist. We'll get you setup quickly! " \
-                     "You will be editing your checklists on Todoist. " \
-                     "Click on the following button to go create and link your Todoist account."
-
     def build(self):
         b = BoxLayout(orientation='horizontal', spacing=10, width=1600, height=900)
         self.title_label = Label(text="Welcome", font_size=30)

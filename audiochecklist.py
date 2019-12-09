@@ -3,6 +3,9 @@
 import configparser
 import time
 
+import orgparse
+import webdav3.client
+
 from kivy.app import App
 from kivy.core.audio import SoundLoader
 from kivy.uix.button import Button
@@ -13,8 +16,6 @@ from kivy.uix.textinput import TextInput
 from kivy.uix.boxlayout import BoxLayout
 
 from google.cloud import texttospeech_v1 as texttospeech
-
-import todoist
 
 
 # Configuration & constants #############################################################
@@ -48,11 +49,20 @@ class AudioChecklistApp(App):
         self.text2audio(checklist_item)
 
     def get_checklist_items(self):
-        api = todoist.TodoistAPI(config['TODOIST_API_KEY'])
-        api.sync()
-        project = api.projects.get_by_id(config['TODOIST_PROJECT_ID'])
-        checklist = api.projects.get_data(config['TODOIST_PROJECT_ID'])
-        return [item['content'] for item in checklist['items']]
+        self.webdav = webdav3.client.Client({
+                'webdav_hostname': config['REPOSITORY_WEBDAV_URL'],
+                'webdav_login':    config['REPOSITORY_WEBDAV_USER'],
+                'webdav_password': config['REPOSITORY_WEBDAV_PASSWORD'],
+        })
+        self.webdav.check('/checklist_flight_planning.org')
+        self.webdav.download_sync(
+                remote_path='/checklist_flight_planning.org',
+                local_path='/tmp/checklist_flight_planning.org')
+
+        self.checklist = orgparse.load('/tmp/checklist_flight_planning.org')
+        checklist_items = self.checklist.children[7][1:]
+
+        return [item.heading for item in checklist_items]
 
     def text2audio(self, text):
         print(text)

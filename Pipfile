@@ -9,7 +9,9 @@ Kivy = "*"
 buildozer = "*"
 Cython = "*"
 virtualenv = "*"
-todoist-python = "*"
+webdavclient3 = "*"
+orgparse = "*"
+requests = "*"
 
 [dev-packages]
 

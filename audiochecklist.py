@@ -1,11 +1,15 @@
 # Imports ###############################################################################
 
 import configparser
+import hashlib
 import time
 
 import orgparse
 import webdav3.client
 
+from os import path
+
+from google.cloud import texttospeech_v1 as texttospeech
 from kivy.app import App
 from kivy.core.audio import SoundLoader
 from kivy.uix.button import Button
@@ -15,7 +19,7 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.textinput import TextInput
 from kivy.uix.boxlayout import BoxLayout
 
-from google.cloud import texttospeech_v1 as texttospeech
+from utils import get_valid_filename
 
 
 # Configuration & constants #############################################################
@@ -46,7 +50,7 @@ class AudioChecklistApp(App):
     def show_next_checklist_item(self, obj):
         checklist_item = self.checklist_items.pop(0)
         self.title_label.text = checklist_item
-        self.text2audio(checklist_item)
+        self.read_text(checklist_item)
 
     def get_checklist_items(self):
         self.webdav = webdav3.client.Client({
@@ -60,17 +64,28 @@ class AudioChecklistApp(App):
                 local_path='/tmp/checklist_flight_planning.org')
 
         self.checklist = orgparse.load('/tmp/checklist_flight_planning.org')
-        checklist_items = self.checklist.children[7][1:]
+        checklist_items = self.checklist.children[6][1:]
 
         return [item.heading for item in checklist_items]
 
-    def text2audio(self, text):
+    def read_text(self, text):
         print(text)
 
         if self.sound:
             self.sound.stop()
             self.sound.unload()
 
+        audio_filename = self.get_audio_filename(text)
+        if not path.exists(audio_filename):
+            self.text2audio(text, audio_filename)
+
+        self.sound = SoundLoader.load(audio_filename)
+        self.sound.play()
+
+    def get_audio_filename(self, text):
+        return '/tmp/{}_{}.mp3'.format(get_valid_filename(text), hashlib.md5(text.encode('utf8')).hexdigest())
+
+    def text2audio(self, text, audio_filename):
         input_text = texttospeech.types.SynthesisInput(text=text)
         voice = texttospeech.types.VoiceSelectionParams(
                     language_code='en-US',
@@ -81,11 +96,8 @@ class AudioChecklistApp(App):
 
         response = self.speech_api.synthesize_speech(input_text, voice, audio_config)
 
-        with open('/tmp/output.mp3', 'wb') as out:
+        with open(audio_filename, 'wb') as out:
             out.write(response.audio_content)
-
-        self.sound = SoundLoader.load('/tmp/output.mp3')
-        self.sound.play()
 
 
 # Main ##################################################################################

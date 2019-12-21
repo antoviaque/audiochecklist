@@ -47,6 +47,9 @@ class AudioChecklistApp(App):
         return b
 
     def show_next_checklist_item(self, obj):
+        if not self.checklist_items:
+            return # TODO: What do we do when we reach the end of the list?
+
         checklist_item = self.checklist_items.pop(0)
         self.title_label.text = checklist_item
         self.read_text(checklist_item)

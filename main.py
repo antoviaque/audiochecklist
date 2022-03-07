@@ -1,7 +1,10 @@
+#!/usr/bin/env python
+
 # Imports ###############################################################################
 
 import configparser
 import hashlib
+import sys
 import time
 
 import orgparse
@@ -55,17 +58,20 @@ class AudioChecklistApp(App):
         self.read_text(checklist_item)
 
     def get_checklist_items(self):
-        self.webdav = webdav3.client.Client({
-                'webdav_hostname': config['REPOSITORY_WEBDAV_URL'],
-                'webdav_login':    config['REPOSITORY_WEBDAV_USER'],
-                'webdav_password': config['REPOSITORY_WEBDAV_PASSWORD'],
-        })
-        self.webdav.check('/checklist_flight_planning.org')
-        self.webdav.download_sync(
-                remote_path='/checklist_flight_planning.org',
-                local_path='/tmp/checklist_flight_planning.org')
+        # TODO: Fix disabled webdav retrieval
+        # self.webdav = webdav3.client.Client({
+        #         'webdav_hostname': config['REPOSITORY_WEBDAV_URL'],
+        #         'webdav_login':    config['REPOSITORY_WEBDAV_USER'],
+        #         'webdav_password': config['REPOSITORY_WEBDAV_PASSWORD'],
+        # })
+        # self.webdav.check('/checklist_flight_planning.org')
+        # self.webdav.download_sync(
+        #         remote_path='/checklist_flight_planning.org',
+        #         local_path='/tmp/checklist_flight_planning.org')
+        #
+        # self.checklist = orgparse.load('/tmp/checklist_flight_planning.org')
 
-        self.checklist = orgparse.load('/tmp/checklist_flight_planning.org')
+        self.checklist = orgparse.load('checklist_flight_planning.org')
         checklist_items = self.checklist.children[6][1:]
 
         return [item.heading for item in checklist_items]
@@ -85,10 +91,11 @@ class AudioChecklistApp(App):
         self.sound.play()
 
     def get_audio_filename(self, text):
-        return '/tmp/{}_{}.mp3'.format(get_valid_filename(text), hashlib.md5(text.encode('utf8')).hexdigest())
+        return './audio/{}_{}.mp3'.format(get_valid_filename(text), hashlib.md5(text.encode('utf8')).hexdigest())
 
 
 # Main ##################################################################################
 
 if __name__ == "__main__":
+    sys.stderr.write('DEBUG-AUDIOCHECKLIST-TEST')
     AudioChecklistApp().run()

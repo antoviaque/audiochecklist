@@ -1,0 +1,141 @@
+* Information gathering
+** Sickness bags
+** AF/D
+** Maps
+** Spare headsets for passengers
+** Dispatch's phone number
+** Aircraft model, equipment, tail & w&b
+** Passenger weight
+** Currency
+*** Type certificate & flight review
+*** Insurance
+*** Medical
+*** Passengers
+* Flight plan
+** Performance: Vspeeds, DMMS
+** Automation: updates Garmin
+** Route & navlog
+*** Alternates
+*** Minimum safe altitude
+** Weather: METAR / TAF / FB / GFA / radar / call
+*** Freezing levels
+** Runways - predicted takeoff, landing, pattern dir/alt & taxi
+*** Takeoff/landing distances & abort points
+*** Runway lengths (departure, arrival, alternates)
+*** Crosswind (departure, arrival, alternates)
+** AF/D (departure, arrival, alternates)
+** W&B takeoff & landing
+** Fuel
+** File plan/itinerary
+* Equipment
+** Pens
+** Spare glasses
+** Headset w/ audio recording cable
+** Fuel tester
+** Headlight
+** Charge
+*** Charge tablet (x2), phone, laptop, battery, GPS, Gopro, onewheel
+*** AA& AAA Batteries
+* Papers
+** Logbook
+** Blank paper
+** Certificate
+** Medical
+** Photo ID
+** Credit card*s*
+** Checklist for model
+** Current afd
+** Current charts
+** Radio license (Canada)
+* Pre-cab
+** NOTAMS (departure, arrival, alternates, en route)
+** Weather: METAR / TAF / FB / GFA / radar / call
+*** Runways - predicted takeoff, landing, pattern dir/alt & taxi
+*** Density altitude
+** Personal minimums & IMSAFE (incl crosswinds)
+*** Snacks
+** Tablet radar overlay active
+** Wallet
+** Baseball cap & glasses
+** USB cable - phone
+** USB cable - gps
+** Charged battery
+** Charged Laptop
+** Charged Tablets (x2)
+** Charged GPS
+** OneWheel + chain
+** Charged GoPro
+** Charged Phone
+* Checkout
+** Dispatch checkout
+*** Keys & logbook
+*** Passenger headset
+** Documents check
+*** Afd, maps (navigation, airports+alternates)
+*** Print: Flight plan, notam, weather, w&b
+*** Checklists - Normal & emergency
+*** Procedures manual
+*** ARROW
+*** Noise emissions
+*** Insurance
+** Weather
+** Runways & taxiways - predicted on takeoff & landing
+** Patterns - predicted turns, altitude on takeoff & landing
+** Abort plan: abort point, engine failures
+* Pre-flight
+** Equipment check:
+*** chalks
+*** oil
+*** camera
+*** Passenger headset
+** GPS on
+** Fuel level
+** Preflight inspection checklist
+** Frost & ice
+** Instructor checkin: air work, dmms
+** Start recording: cloudahoy, camera, audio
+** Start timer
+* Taxi & run-up
+** Note time
+** Engine start & pre-taxi checklist
+** Noise cancelling on
+** Radio ground
+** Instruments & avionics check
+** Takeoff plan
+*** Wind direction & speed
+*** Taxi & runway
+*** Vspeeds
+*** Pattern & route
+** Abort plan: abort point, engine failures
+** Run-up & pre-takeoff checklist
+** Set sqwak
+** Radio tower
+** Note time
+* Takeoff & climb
+** Climb checklist
+** Cruise checklist
+** Open flight plan
+** VOR location check
+** Heading indicator set to target
+* Descent & landing
+** ATIS
+** Landing plan: runway, pattern entry, Vspeeds, taxi
+** Abort plan: abort point
+** Descent & pre-landing checklists
+** Radio tower
+* After landing
+** Note time
+** After landing checklist
+** Radio ground
+** Close flight plan
+* Parking
+** Engine shutdown checklist
+** Note time
+* Debrief
+** Dispatch checkin
+** CFI debrief
+** Book next session & get airplane details
+* Post flight
+** Online notebook
+** Checklist updates
+** Anki updates

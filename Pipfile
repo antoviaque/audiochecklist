@@ -4,19 +4,16 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-google-cloud-texttospeech = "*"
 Kivy = "*"
-buildozer = "*"
-Cython = "*"
-virtualenv = "*"
-webdavclient3 = "*"
+Kivy-examples = "*"
+Cython = "==0.29.19"
+google-cloud-texttospeech = "*"
 orgparse = "*"
-requests = "*"
+webdavclient3 = "==v3.14"
+ffpyplayer = "*"
+pipdeptree = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.7"
-
-[packages.9eacacf]
-file = "https://github.com/matham/ffpyplayer/archive/master.zip"
+python_version = "3.9"

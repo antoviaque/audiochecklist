@@ -11,10 +11,18 @@ from utils import get_valid_filename
 
 # Functions #############################################################################
 
-def get_checklist_items():
-    checklist = orgparse.load('checklist_flight_planning.org')
-    return [item.heading for item in checklist.children]
+def get_all_checklists():
+    return orgparse.load('checklist_flight_planning.org')
 
+def get_all_checklists_items_names():
+    """
+    Return the names of all the checklists and their children items
+    """
+    names = []
+    for checklist in get_all_checklists():
+        names.append(checklist.heading)
+
+    return names
 
 def get_audio_filename(text, extension='ogg'):
     '''

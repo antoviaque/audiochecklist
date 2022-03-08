@@ -8,7 +8,7 @@ import sys
 
 from google.cloud import texttospeech
 
-from checklist import get_audio_filename, get_checklist_items
+from checklist import get_audio_filename, get_all_checklists_items_names
 
 
 # Globals ###############################################################################
@@ -22,7 +22,7 @@ def generate_audio_files():
     """
     Generate a voice synthetized audio file for each item contained in the checklist
     """
-    for text in get_checklist_items():
+    for text in get_all_checklists_items_names():
         sys.stderr.write('CHECKLIST-ITEM: {}\n'.format(text))
 
         audio_filename = get_audio_filename(text, 'mp3')

@@ -1,0 +1,233 @@
+* Flight planning
+** Information gathering
+*** Sickness bags
+*** AF/D
+*** Maps
+*** Spare headsets for passengers
+*** Dispatch's phone number
+*** Aircraft model, equipment, tail & w&b
+*** Passenger weight
+*** Currency
+**** Type certificate & flight review
+**** Insurance
+**** Medical
+**** Passengers
+** Flight plan
+*** Performance: Vspeeds, DMMS
+*** Automation: updates Garmin
+*** Route & navlog
+**** Alternates
+**** Minimum safe altitude
+*** Weather: METAR / TAF / FB / GFA / radar / call
+**** Freezing levels
+*** Runways - predicted takeoff, landing, pattern dir/alt & taxi
+**** Takeoff/landing distances & abort points
+**** Runway lengths (departure, arrival, alternates)
+**** Crosswind (departure, arrival, alternates)
+*** AF/D (departure, arrival, alternates)
+*** W&B takeoff & landing
+*** Fuel
+*** File plan/itinerary
+** Equipment
+*** Pens
+*** Spare glasses
+*** Headset w/ audio recording cable
+*** Fuel tester
+*** Headlight
+*** Charge
+**** Charge tablet (x2), phone, laptop, battery, GPS, Gopro, onewheel
+**** AA& AAA Batteries
+** Papers
+*** Logbook
+*** Blank paper
+*** Certificate
+*** Medical
+*** Photo ID
+*** Credit card*s*
+*** Checklist for model
+*** Current afd
+*** Current charts
+*** Radio license (Canada)
+** Pre-cab
+*** NOTAMS (departure, arrival, alternates, en route)
+*** Weather: METAR / TAF / FB / GFA / radar / call
+**** Runways - predicted takeoff, landing, pattern dir/alt & taxi
+**** Density altitude
+*** Personal minimums & IMSAFE (incl crosswinds)
+**** Snacks
+*** Tablet radar overlay active
+*** Wallet
+*** Baseball cap & glasses
+*** USB cable - phone
+*** USB cable - gps
+*** Charged battery
+*** Charged Laptop
+*** Charged Tablets (x2)
+*** Charged GPS
+*** OneWheel + chain
+*** Charged GoPro
+*** Charged Phone
+** Checkout
+*** Dispatch checkout
+**** Keys & logbook
+**** Passenger headset
+*** Documents check
+**** Afd, maps (navigation, airports+alternates)
+**** Print: Flight plan, notam, weather, w&b
+**** Checklists - Normal & emergency
+**** Procedures manual
+**** ARROW
+**** Noise emissions
+**** Insurance
+*** Weather
+*** Runways & taxiways - predicted on takeoff & landing
+*** Patterns - predicted turns, altitude on takeoff & landing
+*** Abort plan: abort point, engine failures
+* Pre-flight
+#** Equipment check:
+#*** chalks
+#*** oil
+#*** camera
+#*** Passenger headset
+** Fuel level
+** Empty water from floats
+** Frost & ice
+#** Preflight inspection checklist
+** Airplane documents
+** Paddle, rope, life vest
+** Seat & belt adjusted
+** Fuel quantity indicator
+** Ignition switch off
+** Avionics off
+** Master off
+#** GPS on
+#** Instructor checkin: air work, dmms
+* Taxi & run-up
+#** Start recording: cloudahoy, camera, audio
+** Noise cancelling on
+** Note time
+** Start timer
+#** Engine start & pre-taxi checklist
+** Circuit breakers in
+** Electronic equipment off
+** Fuel selector both
+** Master on
+** Beacon on
+** Mixture rich
+** Primer 2 throttles
+** Throttle 1/8th
+** Throttle friction adjusted
+** Prop clear
+** Checklist warms
+** Ignition start
+** Oil pressure increasing
+** Alternator light off
+** RPM 1000
+** Nav lights on
+** Avionics on
+** Radios on
+** Radio ground
+** Set sqwak
+** Flight instruments check
+** Nav instruments check
+** Flight controls free & correct
+** Flaps check
+** Takeoff briefing: Wind direction & speed
+*** Taxi & runway
+*** Vspeeds
+*** Pattern & route
+** Takeoff emergencies: Engine failures
+*** Abort point
+#** Run-up & pre-takeoff checklist
+** Fuel selector both
+** Engine instruments green
+** Circuit breakers all in
+** RPM minimum 6 seconds
+** RPM 1700
+** Carb check
+** Mixture check
+** Mags check
+** RPM 1000
+* Takeoff & climb
+** Doors windows locked
+** Seat belts locked
+** Flight controls free
+** Engine instruments green
+** Master on
+** Mags both
+** Mixture rich
+** Carb heat off
+** Flaps 10
+** Trim set
+** Fuel selector both
+** Area clear
+** Landing & strobe lights on
+** Radio for departure
+** CARS
+** Throttle full
+#** Climb checklist
+** Climb 55
+** 300 feet: Flaps 0
+** RPM 2500
+** Landing lights off
+** Engine instruments green
+** Fuel quantity check
+#** Cruise checklist
+#** Open flight plan
+#** VOR location check
+#** Heading indicator set to target
+* Descent & landing
+#** ATIS
+#** WLNOT
+** Landing plan: runway
+*** Pattern entry
+*** Vspeeds
+#*** Taxi
+** Abort point
+** Radio
+#** Descent & pre-landing checklists
+** Landing light on
+** Fuel selector both
+** Seat belts locked
+** Mixture rich
+** Carb heat off
+** Mags both
+** Water rudder up
+** Downwind: Carb heat on
+*** RPM 2000
+*** Pitch 70
+*** Flaps 10
+** Base: RPM 1500
+*** Flaps 20
+*** Pitch 65
+** Final: RPM idle
+*** Carb heat OFF
+** Touchdown: stick progressively back
+* After landing
+#** After landing checklist
+** Water rudders down
+** RPM 1000
+** Flaps 0
+** Carb heat off
+** Landing & strobe lights off
+** Trim neutral
+** Radio
+#** Close flight plan
+* Parking
+#** Engine shutdown checklist
+** Mixture off
+** Mags off & key out
+** Note time
+** Throttle 0
+** Radios & electrical off
+** Avionics off
+** Master off
+** Doors open
+* Post flight
+** Debrief
+*** Dispatch checkin
+*** CFI debrief
+*** Book next session & get airplane details
+** Online notebook
+** Checklist updates
+** Anki updates

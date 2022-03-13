@@ -12,7 +12,7 @@ from utils import get_valid_filename
 # Functions #############################################################################
 
 def get_all_checklists():
-    return orgparse.load('checklist_flight_planning.org')
+    return orgparse.load('checklist.org')
 
 def get_all_checklists_items_names():
     """

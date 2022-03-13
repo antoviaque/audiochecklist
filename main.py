@@ -34,7 +34,59 @@ class AudioChecklistApp(App):
         super(AudioChecklistApp, self).__init__(*args, **kwargs)
         self.sound = None
         self.selected_checklist_name = None
+        self.buttons = []
         self.update_checklist_items()
+
+    def get_checklists_names(self):
+        return [checklist.heading for checklist in get_all_checklists().children]
+
+    def build(self):
+        self.body = BoxLayout(orientation='vertical', spacing=10, width=1600, height=900)
+
+        self.build_checklist_selector()
+        self.build_checklist_body()
+        self.build_check_button()
+        
+        return self.body
+
+    def build_checklist_selector(self):
+        """
+        Layout: Checklist selector dropdown
+        """
+        self.checklist_selector = Spinner(
+            # default value shown
+            text=self.selected_checklist_name,
+            # available values
+            values=self.get_checklists_names(),
+            # positioning
+            size_hint=(1, 0.1),
+            pos_hint={'center_x': .5, 'center_y': .5})
+        self.body.add_widget(self.checklist_selector)
+
+        def on_selected_checklist_change(spinner, text):
+            print('Checklist changed by user to', text)
+            self.selected_checklist_name = text
+            self.update_checklist_items()
+            self.reset_checklist_items_buttons()
+            self.show_next_checklist_item(None)
+
+        self.checklist_selector.bind(text=on_selected_checklist_change)
+
+    def build_checklist_body(self):
+        """
+        Layout: Checklist body - list of items
+        """
+        self.checklist_items_buttons_box = BoxLayout(orientation='vertical', spacing=10, width=1600)
+        self.body.add_widget(self.checklist_items_buttons_box)
+        self.reset_checklist_items_buttons()
+
+    def build_check_button(self):
+        """
+        Layout: Check button - Mark item as done
+        """
+        self.checkbtn = Button(text='Next', size_hint=(1,0.2))
+        self.checkbtn.bind(on_release=self.show_next_checklist_item)
+        self.body.add_widget(self.checkbtn)
 
     def update_checklist_items(self):
         """
@@ -50,85 +102,50 @@ class AudioChecklistApp(App):
             if self.selected_checklist_name == checklist.heading:
                 self.selected_checklist = checklist
                 self.selected_checklist_items = [item.heading for item in checklist][1:]
+                self.selected_checklist_items_done = []
+                self.current_item_name = None
                 print('Refreshed checklist items from selected checklist', self.selected_checklist_name)
                 print('Checklist items:', self.selected_checklist_items)
 
-    def get_checklists_names(self):
-        return [checklist.heading for checklist in get_all_checklists().children]
-
-    def build(self):
-        b = BoxLayout(orientation='vertical', spacing=10, width=1600, height=900)
-
-        self.build_checklist_selector(b)
-        self.build_checklist_body(b)
-        self.build_check_button(b)
-        
-        return b
-
-    def build_checklist_selector(self, b):
-        """
-        Layout: Checklist selector dropdown
-        """
-        self.checklist_selector = Spinner(
-            # default value shown
-            text=self.selected_checklist_name,
-            # available values
-            values=self.get_checklists_names(),
-            # positioning
-            size_hint=(1, 0.1),
-            pos_hint={'center_x': .5, 'center_y': .5})
-        b.add_widget(self.checklist_selector)
-
-        def on_selected_checklist_change(spinner, text):
-            print('Checklist changed by user to', text)
-            self.selected_checklist_name = text
-            self.update_checklist_items()
-            self.show_next_checklist_item(None)
-
-        self.checklist_selector.bind(text=on_selected_checklist_change)
-
-    def build_checklist_body(self, b):
-        """
-        Layout: Checklist body - list of items
-        """
+    def reset_checklist_items_buttons(self):
+        # Clear existing buttons
+        for button in self.buttons:
+            self.checklist_items_buttons_box.remove_widget(button)
         self.buttons = []
+
         for checklist_item in self.selected_checklist_items:
             button = Button(text=checklist_item, size_hint=(1,0.02), halign='left')#, text_size=(1,1))
-            button.text_size = [b.width, None]
+            button.text_size = [self.body.width, None]
             def callback(instance):
                 print('The button <%s> is being pressed' % instance.text)
             button.bind(on_press=callback)
             self.buttons.append(button)
-            b.add_widget(button)
-
-    def build_check_button(self, b):
-        """
-        Layout: Check button - Mark item as done
-        """
-        self.checkbtn = Button(text='Next', size_hint=(1,0.2))
-        self.checkbtn.bind(on_release=self.show_next_checklist_item)
-        b.add_widget(self.checkbtn)
+            self.checklist_items_buttons_box.add_widget(button)
 
     def show_next_checklist_item(self, obj):
         if not self.selected_checklist_items:
             return # TODO: What do we do when we reach the end of the list?
 
-        done_item_name = self.selected_checklist_items.pop(0)
-        next_item_name = self.selected_checklist_items[0]
+        done_item_name = self.current_item_name
+        self.selected_checklist_items_done.append(done_item_name)
+        self.current_item_name = self.selected_checklist_items.pop(0)
 
-        done_item_button = self.find_button_by_name(done_item_name)
-        next_item_button = self.find_button_by_name(next_item_name)
+        if done_item_name is not None:
+            done_item_button = self.find_button_by_name(done_item_name)
+            done_item_button.disabled = True
+            done_item_button.state = 'normal'
 
-        done_item_button.disabled = True
-        done_item_button.state = 'normal'
-        next_item_button.state = 'down'
+        current_item_button = self.find_button_by_name(self.current_item_name)
+        current_item_button.state = 'down'
         
-        self.read_text(next_item_name)
+        self.read_text(self.current_item_name)
 
     def find_button_by_name(self, name):
         for button in self.buttons:
             if button.text == name:
                 return button
+        else:
+            raise IndexError(name)
 
     def read_text(self, text):
         if self.sound:

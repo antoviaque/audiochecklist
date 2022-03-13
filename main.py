@@ -91,8 +91,15 @@ class AudioChecklistApp(App):
         """
         Layout: Checklist body - list of items
         """
-        self.title_label = Label(text="", font_size=30)
-        b.add_widget(self.title_label)
+        self.buttons = []
+        for checklist_item in self.selected_checklist_items:
+            button = Button(text=checklist_item, size_hint=(1,0.02), halign='left')#, text_size=(1,1))
+            button.text_size = [b.width, None]
+            def callback(instance):
+                print('The button <%s> is being pressed' % instance.text)
+            button.bind(on_press=callback)
+            self.buttons.append(button)
+            b.add_widget(button)
 
     def build_check_button(self, b):
         """
@@ -106,9 +113,22 @@ class AudioChecklistApp(App):
         if not self.selected_checklist_items:
             return # TODO: What do we do when we reach the end of the list?
 
-        checklist_item = self.selected_checklist_items.pop(0)
-        self.title_label.text = checklist_item
-        self.read_text(checklist_item)
+        done_item_name = self.selected_checklist_items.pop(0)
+        next_item_name = self.selected_checklist_items[0]
+
+        done_item_button = self.find_button_by_name(done_item_name)
+        next_item_button = self.find_button_by_name(next_item_name)
+
+        done_item_button.disabled = True
+        done_item_button.state = 'normal'
+        next_item_button.state = 'down'
+        
+        self.read_text(next_item_name)
+
+    def find_button_by_name(self, name):
+        for button in self.buttons:
+            if button.text == name:
+                return button
 
     def read_text(self, text):
         if self.sound:

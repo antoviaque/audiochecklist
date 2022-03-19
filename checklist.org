@@ -29,22 +29,21 @@
 ** Master on
 ** Beacon on
 ** Mixture rich
-** Primer 2 throttles
-** Throttle 1/8th
-** Throttle friction adjusted
+** Prime 2 throttles
+** Throttle 1/8th & friction adjusted
 ** Prop clear
 ** Checklist warms
 ** Ignition start
 ** Oil pressure increasing
 ** Alternator light off
 ** RPM 1000
-** Nav lights on
+** Nav & taxi lights on
 ** Avionics on
 ** Radios on
 ** Radio ground
 ** Set sqwak
 ** Flight instruments check
-** Nav instruments check
+#** Nav instruments check
 ** Flight controls free & correct
 ** Flaps check
 ** Takeoff briefing: Wind direction & speed
@@ -63,7 +62,7 @@
 ** Mixture check
 ** Mags check
 ** RPM 1000
-* Takeoff & climb
+* Pre-takeoff, takeoff & climb
 ** Doors windows locked
 ** Seat belts locked
 ** Flight controls free
@@ -75,8 +74,8 @@
 ** Flaps 10
 ** Trim set
 ** Fuel selector both
-** Area clear
 ** Landing & strobe lights on
+** Area clear
 ** Radio for departure
 ** CARS
 ** Throttle full
@@ -91,7 +90,7 @@
 #** Open flight plan
 #** VOR location check
 #** Heading indicator set to target
-* Descent & landing
+* Descent, landing & after landing
 #** ATIS
 #** WLNOT
 ** Landing plan: runway
@@ -118,7 +117,7 @@
 ** Final: RPM idle
 *** Carb heat OFF
 ** Touchdown: stick progressively back
-* After landing
+#* After landing
 #** After landing checklist
 ** Water rudders down
 ** RPM 1000
@@ -131,18 +130,19 @@
 * Parking
 #** Engine shutdown checklist
 ** Mixture off
-** Mags off & key out
-** Note time
 ** Throttle 0
+** Lights off
+** Mags off & key out
 ** Radios & electrical off
 ** Avionics off
 ** Master off
+** Note time
 ** Doors open
-* Post flight
-** Debrief
-*** Dispatch checkin
-*** CFI debrief
-*** Book next session & get airplane details
-** Online notebook
-** Checklist updates
-** Anki updates
+#* Post flight
+#** Debrief
+#*** Dispatch checkin
+#*** CFI debrief
+#*** Book next session & get airplane details
+#** Online notebook
+#** Checklist updates
+#** Anki updates

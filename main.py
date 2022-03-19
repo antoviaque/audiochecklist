@@ -9,6 +9,7 @@ import time
 
 from kivy.app import App
 from kivy.core.audio import SoundLoader
+from kivy.core.window import Window
 from kivy.uix.button import Button
 from kivy.uix.scatter import Scatter
 from kivy.uix.label import Label
@@ -33,6 +34,7 @@ class AudioChecklistApp(App):
     def __init__(self, *args, **kwargs):
         super(AudioChecklistApp, self).__init__(*args, **kwargs)
         self.sound = None
+        self.keyboard = Window.request_keyboard(self.keyboard_closed, self.root)
         self.buttons = []
         self.selected_checklist = None
         self.update_checklist_items()
@@ -107,6 +109,23 @@ class AudioChecklistApp(App):
         self.checkbtn = Button(text='Next', size_hint=(1,0.2))
         self.checkbtn.bind(on_release=self.show_next_checklist_item)
         self.body.add_widget(self.checkbtn)
+
+        self.keyboard.bind(on_key_down=self.on_keyboard_down)
+
+    def keyboard_closed(self):
+        # Don't unbind the keyboard event on keyboard closing, as we have 2 keyboards (virtual & bluetooth)
+        pass
+
+    def on_keyboard_down(self, keyboard, keycode, text, modifiers):
+        print('KEY DOWN:', keycode)
+        keycode = keycode[0]
+
+        KEY_NEXT = 1073742082
+        KEY_PREV = 1073742083
+        if keycode == KEY_NEXT:
+            self.show_next_checklist_item(None)
+        elif keycode == KEY_PREV:
+            print('Key previous!')
 
     def reset_checklist_items_buttons(self):
         # Clear existing buttons

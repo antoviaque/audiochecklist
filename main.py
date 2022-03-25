@@ -67,7 +67,7 @@ class AudioChecklistApp(App):
 
         self.build_checklist_selector()
         self.build_checklist_body()
-        self.build_check_button()
+        self.build_check_buttons()
         
         return self.body
 
@@ -90,7 +90,7 @@ class AudioChecklistApp(App):
             self.selected_checklist = self.get_checklist_by_name(text)
             self.update_checklist_items()
             self.reset_checklist_items_buttons()
-            self.show_next_checklist_item(None)
+            self.show_next_checklist_item()
 
         self.checklist_selector.bind(text=on_selected_checklist_change)
 
@@ -102,13 +102,17 @@ class AudioChecklistApp(App):
         self.body.add_widget(self.checklist_items_buttons_box)
         self.reset_checklist_items_buttons()
 
-    def build_check_button(self):
+    def build_check_buttons(self):
         """
-        Layout: Check button - Mark item as done
+        Layout: Check buttons - Mark item as done, skip
         """
-        self.checkbtn = Button(text='Next', size_hint=(1,0.2))
-        self.checkbtn.bind(on_release=self.show_next_checklist_item)
-        self.body.add_widget(self.checkbtn)
+        self.skip_button = Button(text='Skip', size_hint=(1,0.15))
+        self.skip_button.bind(on_release=self.skip_checklist_item)
+        self.body.add_widget(self.skip_button)
+
+        self.check_button = Button(text='Next', size_hint=(1,0.2))
+        self.check_button.bind(on_release=self.complete_checklist_item)
+        self.body.add_widget(self.check_button)
 
         self.keyboard.bind(on_key_down=self.on_keyboard_down)
 
@@ -122,8 +126,11 @@ class AudioChecklistApp(App):
 
         KEY_NEXT = 1073742082
         KEY_PREV = 1073742083
+        KEY_SKIP = 1073742085
         if keycode == KEY_NEXT:
-            self.show_next_checklist_item(None)
+            self.complete_checklist_item(None)
+        elif keycode == KEY_SKIP:
+            self.skip_checklist_item(None)
         elif keycode == KEY_PREV:
             print('Key previous!')
 
@@ -144,17 +151,28 @@ class AudioChecklistApp(App):
             self.buttons.append(button)
             self.checklist_items_buttons_box.add_widget(button)
 
-    def show_next_checklist_item(self, obj):
+    def complete_checklist_item(self, obj):
+        if self.current_item is not None:
+            self.selected_checklist_items_done.append(self.current_item)
+            self.current_item.button.disabled = True
+
+        self.show_next_checklist_item()
+
+    def skip_checklist_item(self, obj):
+        if self.current_item is not None:
+            self.selected_checklist_items_todo.append(self.current_item) # Re-queue the item at the end
+
+        self.show_next_checklist_item()
+
+    def show_next_checklist_item(self):
         if not self.selected_checklist_items_todo:
             return # TODO: What do we do when we reach the end of the list?
 
-        done_item = self.current_item
-        self.selected_checklist_items_done.append(done_item)
+        previous_item = self.current_item
         self.current_item = self.selected_checklist_items_todo.pop(0)
 
-        if done_item is not None:
-            done_item.button.disabled = True
-            done_item.button.state = 'normal'
+        if previous_item is not None:
+            previous_item.button.state = 'normal'
 
         self.current_item.button.state = 'down'
         

@@ -7,7 +7,10 @@ import os
 import sys
 import time
 
+from functools import partial
+
 from kivy.app import App
+from kivy.clock import Clock
 from kivy.core.audio import SoundLoader
 from kivy.core.window import Window
 from kivy.uix.button import Button
@@ -37,6 +40,7 @@ class AudioChecklistApp(App):
         self.keyboard = Window.request_keyboard(self.keyboard_closed, self.root)
         self.buttons = []
         self.selected_checklist = None
+        self.history = []
         self.update_checklist_items()
 
     def update_checklist_items(self):
@@ -122,17 +126,16 @@ class AudioChecklistApp(App):
 
     def on_keyboard_down(self, keyboard, keycode, text, modifiers):
         print('KEY DOWN:', keycode)
-        keycode = keycode[0]
 
         KEY_NEXT = 1073742082
         KEY_PREV = 1073742083
         KEY_SKIP = 1073742085
-        if keycode == KEY_NEXT:
+        if keycode[0] == KEY_NEXT or keycode[1] == 'right':
             self.complete_checklist_item(None)
-        elif keycode == KEY_SKIP:
+        elif keycode[0] == KEY_SKIP or keycode[1] == 'down':
             self.skip_checklist_item(None)
-        elif keycode == KEY_PREV:
-            print('Key previous!')
+        elif keycode[0] == KEY_PREV or keycode[1] == 'left':
+            self.undo_last_action()
 
     def reset_checklist_items_buttons(self):
         # Clear existing buttons
@@ -155,16 +158,19 @@ class AudioChecklistApp(App):
         if self.current_item is not None:
             self.selected_checklist_items_done.append(self.current_item)
             self.current_item.button.disabled = True
+            self.history.append('complete')
 
         self.show_next_checklist_item()
 
     def skip_checklist_item(self, obj):
         if self.current_item is not None:
             self.selected_checklist_items_todo.append(self.current_item) # Re-queue the item at the end
+            self.history.append('skip')
 
-        self.show_next_checklist_item()
+        self.read_text('skipped')
+        self.show_next_checklist_item(voice_delay=0.5)
 
-    def show_next_checklist_item(self):
+    def show_next_checklist_item(self, voice_delay=0):
         if not self.selected_checklist_items_todo:
             return # TODO: What do we do when we reach the end of the list?
 
@@ -176,9 +182,9 @@ class AudioChecklistApp(App):
 
         self.current_item.button.state = 'down'
         
-        self.read_text(self.current_item.heading)
+        Clock.schedule_once(partial(self.read_text, self.current_item.heading), voice_delay)
 
-    def read_text(self, text):
+    def read_text(self, text, *largs):
         if self.sound:
             self.sound.stop()
             self.sound.unload()
@@ -190,6 +196,26 @@ class AudioChecklistApp(App):
         self.sound = SoundLoader.load(audio_filename)
         self.sound.play()
 
+    def undo_last_action(self):
+        if not self.history:
+            # What to do when we don't have any previous action to undo?
+            return
+
+        last_action = self.history.pop()
+        if last_action == 'complete':
+            undone_item = self.selected_checklist_items_done.pop()
+            undone_item.button.disabled = False
+        elif last_action == 'skip':
+            undone_item = self.selected_checklist_items_todo.pop()
+
+        requeued_item = self.current_item
+        self.selected_checklist_items_todo.insert(0, requeued_item)
+        self.current_item = undone_item
+
+        requeued_item.button.state = 'normal'
+        undone_item.button.state = 'down'
+
+        self.read_text(undone_item.heading)
 
 
 # Main ##################################################################################

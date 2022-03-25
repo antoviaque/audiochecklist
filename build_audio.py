@@ -22,7 +22,7 @@ def generate_audio_files():
     """
     Generate a voice synthetized audio file for each item contained in the checklist
     """
-    for text in get_all_checklists_items_names():
+    for text in get_all_checklists_items_names() + ['skipped']:
         sys.stderr.write('CHECKLIST-ITEM: {}\n'.format(text))
 
         audio_filename = get_audio_filename(text, 'mp3')

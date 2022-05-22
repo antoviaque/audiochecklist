@@ -40,7 +40,7 @@ def text_to_audio_file(text, audio_filename):
                 language_code='en-US',
                 name='en-US-Wavenet-F')
     audio_config = texttospeech.AudioConfig(
-                speaking_rate=1.3,
+                speaking_rate=2,
                 audio_encoding=texttospeech.AudioEncoding.MP3)
 
     response = speech_api.synthesize_speech(input=input_text, voice=voice, audio_config=audio_config)

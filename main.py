@@ -119,12 +119,16 @@ class AudioChecklistApp(App):
         self.body.add_widget(self.check_button)
 
         self.keyboard.bind(on_key_down=self.on_keyboard_down)
+        Window.bind(on_joy_button_down=self.on_joy_button_down)
 
     def keyboard_closed(self):
         # Don't unbind the keyboard event on keyboard closing, as we have 2 keyboards (virtual & bluetooth)
         pass
 
     def on_keyboard_down(self, keyboard, keycode, text, modifiers):
+        """
+        Support for Tunai bluetooth remote (GT0030101)
+        """
         print('KEY DOWN:', keycode)
 
         KEY_NEXT = 1073742082
@@ -135,6 +139,22 @@ class AudioChecklistApp(App):
         elif keycode[0] == KEY_SKIP or keycode[1] == 'down':
             self.skip_checklist_item(None)
         elif keycode[0] == KEY_PREV or keycode[1] == 'left':
+            self.undo_last_action()
+
+    def on_joy_button_down(self, win, stickid, buttonid):
+        """
+        Support for Ricmotech USB Push-to-Talk (RMT-PTT-USB)
+        """
+        print('JOYSTICK DOWN:', stickid, buttonid)
+
+        KEY_NEXT = 0
+        KEY_PREV = 1
+        KEY_SKIP = 2
+        if buttonid == KEY_NEXT:
+            self.complete_checklist_item(None)
+        elif buttonid == KEY_SKIP:
+            self.skip_checklist_item(None)
+        elif buttonid == KEY_PREV:
             self.undo_last_action()
 
     def reset_checklist_items_buttons(self):

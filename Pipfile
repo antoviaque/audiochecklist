@@ -12,8 +12,9 @@ orgparse = "*"
 webdavclient3 = "==v3.14"
 ffpyplayer = "*"
 pipdeptree = "*"
+buildozer = {path = "./buildozer"}
 
 [dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "3.10"

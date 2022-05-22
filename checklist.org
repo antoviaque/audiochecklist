@@ -2,67 +2,66 @@
 #** Equipment check:
 #*** chalks
 #*** oil
-#*** camera
 #*** Passenger headset
 ** Fuel level
+** Oil level
 ** Empty water from floats
 ** Frost & ice
 #** Preflight inspection checklist
 ** Airplane documents
 ** Paddle, rope, life vest
 ** Seat & belt adjusted
-** Fuel quantity indicator
 ** Ignition switch off
 ** Avionics off
 ** Master off
+** V Bar check
+** Mount clicker
+** Mount camera
 #** GPS on
 #** Instructor checkin: air work, dmms
-* Taxi & run-up
+* Start
 #** Start recording: cloudahoy, camera, audio
-** Noise cancelling on
-** Note time
-** Start timer
 #** Engine start & pre-taxi checklist
 ** Circuit breakers in
 ** Electronic equipment off
+** Master off
 ** Fuel selector both
+** Mixture rich
+** Wind
+#** Note time [automate]
+** Start timer
 ** Master on
 ** Beacon on
-** Mixture rich
-** Prime 2 throttles
+** Prime 2 or 6 throttles
 ** Throttle 1/8th & friction adjusted
+#** Warms
 ** Prop clear
-** Checklist warms
-** Ignition start
+** Ignition start & RPM 1000
+** Water rudder down
 ** Oil pressure increasing
 ** Alternator light off
-** RPM 1000
-** Nav & taxi lights on
-** Avionics on
-** Radios on
+** Lights nav & taxi on
+** Avionics, radios & transponder on
+** Noise cancelling on
 ** Radio ground
-** Set sqwak
-** Flight instruments check
-#** Nav instruments check
+#** Set sqwak
+** Instruments check
 ** Flight controls free & correct
+#** Nav instruments check
 ** Flaps check
-** Takeoff briefing: Wind direction & speed
-*** Taxi & runway
-*** Vspeeds
-*** Pattern & route
-** Takeoff emergencies: Engine failures
-*** Abort point
+** Briefing: wind, runway, route, vspeeds
+** Emergencies: engine failure, abort point
 #** Run-up & pre-takeoff checklist
-** Fuel selector both
+** At run-up point: fuel selector both
 ** Engine instruments green
 ** Circuit breakers all in
-** RPM minimum 6 seconds
-** RPM 1700
+** Throttle min 6s then 1700
 ** Carb check
 ** Mixture check
 ** Mags check
+** Suction check
 ** RPM 1000
-* Pre-takeoff, takeoff & climb
+* Pre-takeoff
 ** Doors windows locked
 ** Seat belts locked
 ** Flight controls free
@@ -70,52 +69,49 @@
 ** Master on
 ** Mags both
 ** Mixture rich
-** Carb heat off
 ** Flaps 10
 ** Trim set
 ** Fuel selector both
-** Landing & strobe lights on
-** Area clear
-** Radio for departure
-** CARS
-** Throttle full
+** Lights landing & strobe on
+#** Camera on
+** Radio departure
+** CARS & throttle full
 #** Climb checklist
-** Climb 55
-** 300 feet: Flaps 0
-** RPM 2500
-** Landing lights off
+** Climb 60
+** 300 feet: Flaps 0, RPM 2500
+** Landing & strobe lights off
 ** Engine instruments green
 ** Fuel quantity check
 #** Cruise checklist
 #** Open flight plan
 #** VOR location check
 #** Heading indicator set to target
-* Descent, landing & after landing
-#** ATIS
-#** WLNOT
-** Landing plan: runway
-*** Pattern entry
-*** Vspeeds
-#*** Taxi
-** Abort point
-** Radio
-#** Descent & pre-landing checklists
-** Landing light on
-** Fuel selector both
+* Pre-maneuver
 ** Seat belts locked
+** Water rudder up
+** Fuel selector both
 ** Mixture rich
 ** Carb heat off
+** Landing light on
 ** Mags both
+* Landing
+#** ATIS
+#** WLNOT
+** Landing plan: runway & pattern, abort point
+#*** Vspeeds
+#*** Taxi
+** Radio
+#** Descent & pre-landing checklists
+** Position in seat adjusted
+** Seat belts locked
 ** Water rudder up
-** Downwind: Carb heat on
-*** RPM 2000
-*** Pitch 70
-*** Flaps 10
-** Base: RPM 1500
-*** Flaps 20
-*** Pitch 65
-** Final: RPM idle
-*** Carb heat OFF
+** Fuel selector both
+** Mixture rich
+** Landing light on
+** Mags both
+** Downwind: flaps 10, pitch 70, radio
+** Base: RPM 1500, flaps 20, pitch 65
+** Final: RPM idle, carb heat OFF, radio
 ** Touchdown: stick progressively back
 #* After landing
 #** After landing checklist
@@ -123,20 +119,23 @@
 ** RPM 1000
 ** Flaps 0
 ** Carb heat off
-** Landing & strobe lights off
+** Landing light off
 ** Trim neutral
 ** Radio
 #** Close flight plan
-* Parking
+* Docking
 #** Engine shutdown checklist
-** Mixture off
-** Throttle 0
-** Lights off
-** Mags off & key out
-** Radios & electrical off
+** Radio call docking
+** Radio & transponder off
+** Strobe & landing lights off
 ** Avionics off
+** Docking: Mixture off, mags off & key out
+** Throttle 0
+** Water rudders up
+** Lights off
 ** Master off
 ** Note time
+** Detach clicker & gopro
 ** Doors open
 #* Post flight
 #** Debrief

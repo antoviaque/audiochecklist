@@ -13,7 +13,7 @@ package.domain = org.plebia.audiochecklist
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas,cfg,org,json,ogg
+source.include_exts = py,png,jpg,kv,atlas,cfg,org,json,ogg,ini
 
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
@@ -38,7 +38,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,google-cloud-texttospeech,google-api-core,google-auth,pyasn1,rsa,pyasn1-modules,protobuf,cachetools,grpcio,googleapis-common-protos,grpcio-status,proto-plus,,orgparse,webdavclient3,lxml,python-dateutil,six,requests,certifi,charset-normalizer,idna,urllib3,ffpyplayer
+requirements = python3,kivy,google-cloud-texttospeech,google-api-core,google-auth,pyasn1,rsa,pyasn1-modules,protobuf,cachetools,grpcio,googleapis-common-protos,grpcio-status,proto-plus,,orgparse,webdavclient3,lxml,python-dateutil,six,requests,certifi,charset-normalizer,idna,urllib3,ffpyplayer,pygame
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes

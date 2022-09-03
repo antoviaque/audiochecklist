@@ -1,0 +1,151 @@
+beacon, nav, taxi, strobe, landing
+
+* Pre-flight
+#** Equipment check:
+#*** chalks
+#*** oil
+#*** Passenger headset
+** Fuel level
+** Oil level
+** Empty water from floats
+** Frost & ice
+#** Preflight inspection checklist
+** Airplane documents
+** Paddle, rope, life vest
+** Seat & belt adjusted
+** Ignition switch off
+** Avionics off
+** Master off
+** V Bar check
+** Mount clicker
+** Mount camera
+#** GPS on
+#** Instructor checkin: air work, dmms
+* Start
+#** Start recording: cloudahoy, camera, audio
+#** Engine start & pre-taxi checklist
+** Circuit breakers in
+** Electronic equipment off
+** Master off
+** Fuel selector both
+** Mixture rich
+** Wind
+#** Note time [automate]
+** Start timer
+** Master on
+** Beacon on
+** Prime 2 or 6 throttles
+** Throttle 1/8th & friction adjusted
+#** Warms
+** Prop clear
+** Ignition start & RPM 1000
+** Water rudder down
+** Oil pressure increasing
+** Alternator light off
+** Lights nav & taxi on
+** Avionics, radios & transponder on
+** Noise cancelling on
+** Radio ground
+#** Set sqwak
+** Instruments check
+** Flight controls free & correct
+#** Nav instruments check
+** Flaps check
+** Briefing: wind, runway, route, vspeeds
+** Emergencies: engine failure, abort point
+#** Run-up & pre-takeoff checklist
+** At run-up point: fuel selector both
+** Engine instruments green
+** Circuit breakers all in
+** Throttle min 6s then 1700
+** Carb check
+** Mixture check
+** Mags check
+** Suction check
+** RPM 1000
+* Pre-takeoff
+** Doors windows locked
+** Seat belts locked
+** Flight controls free
+** Engine instruments green
+** Master on
+** Mags both
+** Mixture rich
+** Flaps 10
+** Trim set
+** Fuel selector both
+** Lights landing & strobe on
+#** Camera on
+** Radio departure
+** CARS & throttle full
+#** Climb checklist
+** Climb 60
+** 300 feet: Flaps 0, RPM 2500
+** Lights taxi & landing off
+** Engine instruments green
+** Fuel quantity check
+#** Cruise checklist
+#** Open flight plan
+#** VOR location check
+#** Heading indicator set to target
+* Pre-maneuver
+** Seat belts locked
+** Water rudder up
+** Fuel selector both
+** Mixture rich
+** Carb heat off
+** Light landing on
+** Mags both
+* Landing
+#** ATIS
+#** WLNOT
+** Landing plan: runway & pattern, abort point
+#*** Vspeeds
+#*** Taxi
+** Radio
+#** Descent & pre-landing checklists
+** Position in seat adjusted
+** Seat belts locked
+** Water rudder up
+** Fuel selector both
+** Mixture rich
+** Carb heat on
+** Lights taxi & landing on
+** Mags both
+** Downwind: flaps 10, pitch 70, radio
+** Base: RPM 1500, flaps 20, pitch 65
+** Final: RPM idle, carb heat OFF, radio
+** Touchdown: stick progressively back
+#* After landing
+#** After landing checklist
+** Water rudders down
+** RPM 1000
+** Flaps 0
+** Carb heat off
+** Trim neutral
+** Light landing & strobe off
+** Radio
+#** Close flight plan
+* Docking
+#** Engine shutdown checklist
+** Radio call docking
+** Radio & transponder off
+** Lights landing & strobe off
+** Avionics off
+** Docking: Mixture off, mags off & key out
+** Throttle 0
+** Water rudders up
+** Lights off
+** Master off
+** Note time
+** Detach clicker
+** Pack gopro & tablet
+** Doors open
+#* Post flight
+#** Debrief
+#*** Dispatch checkin
+#*** CFI debrief
+#*** Book next session & get airplane details
+#** Online notebook
+#** Checklist updates
+#** Anki updates

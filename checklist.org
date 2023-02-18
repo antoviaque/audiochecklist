@@ -1,7 +1,5 @@
 # C152 from Sabadell
 
-TODO: beacon, nav, taxi, strobe, landing
-
 * Pre-flight
 #### Urgent items (frequent source of delay when missing)
 ** Equipment check:
@@ -10,6 +8,7 @@ TODO: beacon, nav, taxi, strobe, landing
 *** Passenger headset
 ** Fuel level
 ** Oil level
+** Pre-airport & checkout checklists
 #** Empty water from floats
 #### Interior checks
 ** Airplane documents
@@ -39,7 +38,8 @@ TODO: beacon, nav, taxi, strobe, landing
 #** Instructor checkin: air work, dmms
 * Start
 #** Engine start & pre-taxi checklist
-** Start recording: cloudahoy, camera, audio
+** Personal locator on
+** Start: cloudahoy, camera, audio, skydemon
 ** Parking break off (full right)
 ** Circuit breakers in
 ** Electronic equipment off
@@ -49,6 +49,7 @@ TODO: beacon, nav, taxi, strobe, landing
 ** Flight controls free & correct
 ** Carb heat off
 ** Note time
+** Log engine start
 ** Start timer
 ** Master battery on
 ** Beacon on
@@ -72,6 +73,7 @@ TODO: beacon, nav, taxi, strobe, landing
 ** Radio ground
 ** Set altimeter
 ** Set sqwak
+** Log off block
 ** Taxi: check brakes, turn coordinator, heading
 #** Nav instruments check
 ** Briefing: wind, runway, route, vspeeds
@@ -83,7 +85,7 @@ TODO: beacon, nav, taxi, strobe, landing
 ** RPM 1700
 ** Mags check: max drop 125, diff 50
 ** Mixture check
-** Carb heat on & check
+** Carb heat on & check drop
 ** Ammeter charging
 ** Engine instruments green
 ** Suction green
@@ -103,33 +105,33 @@ TODO: beacon, nav, taxi, strobe, landing
 ** Seat belts locked
 ** Fuel selector both
 ** Flaps 10
-** Mixture rich
+** Mixture rich or lean above 3000
 ** Carb heat off
 ** Trim to takeoff
 ** Flight controls free
 ** Mags both
 ** Master on
+** Locate abort point
 ** Camera on
 ** Radio departure
-** Camera: clearance & area clear
+** Camera: clearance, area clear
 ** Lights: landing & strobe on, transponder alt
 ** Action: line up, compass/giro to runway
 #** CARS & throttle full
-** Callouts: RPM 2200+
-** Airspeed alive
-** Engine instruments green at 50
-** Rotate at 60
+** Callouts: RPM, airspeed, engine green at 50
 #** Climb checklist
-** Climb 70
-** 500 feet: Flaps 0
+** 500 feet: speed check, flaps UP
 # RPM 2500
+** Engine green
 ** Lights taxi & landing off
-** Engine instruments green
 ** Fuel quantity check
 * Cruise
 #** Open flight plan
+** Fuel quantity check
+** Engine green
 ** RPM 2300
-** Mixture lean
+** Mixture lean above 3000
+** Transponder ALT
 ** VOR location check
 #** Heading indicator set to target
 * Pre-maneuver
@@ -138,10 +140,8 @@ TODO: beacon, nav, taxi, strobe, landing
 ** Fuel selector both
 ** Mixture rich
 ** Carb heat off
-** Light landing on
+** Light landing & strobe on
 ** Mags both
-
-
 * Landing
 ** ATIS
 #** WLNOT
@@ -161,12 +161,12 @@ TODO: beacon, nav, taxi, strobe, landing
 ** Mags both
 ** Downwind: flaps 10, pitch 70, radio
 ** Base: RPM 1500, flaps 20, pitch 65
-** Final: radio, RPM idle
+** Final: radio, check heading, RPM idle
 #** Touchdown: stick progressively back
 #* After landing
 #** After landing checklist
 #** Water rudders down
-** RPM 1000
+** After landing: RPM 1000
 ** Flaps 0
 ** Carb heat off
 ** Transponder standby
@@ -177,6 +177,7 @@ TODO: beacon, nav, taxi, strobe, landing
 * Parking
 #** Engine shutdown checklist
 #** Radio call docking
+** Log on block
 ** Radio & transponder off
 ** Avionics off
 #** Docking: Mixture off, mags off & key out
@@ -189,12 +190,15 @@ TODO: beacon, nav, taxi, strobe, landing
 ** Picture of tach & horometers
 ** Master off
 ** Note time
+** Log engine stop
+** Stop: skydemon, cloudahoy, camera, audio
+** Personal locator off
 ** Control lock set
 ** Pitot cover set
 ** Chocks set
 ** Detach clicker
-** Pack gopro & tablet
 ** Close flight plan
+** Pack gopro & tablet
 #** Doors open
 #* Post flight
 #** Debrief

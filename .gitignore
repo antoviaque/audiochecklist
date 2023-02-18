@@ -2,7 +2,6 @@
 *.swp
 /google-api-auth-text2speech.json
 /audiochecklist.cfg
-buildozer/
 .buildozer/
 archive/
 bin/

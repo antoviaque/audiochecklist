@@ -12,7 +12,7 @@ orgparse = "*"
 webdavclient3 = "==v3.14"
 ffpyplayer = "*"
 pipdeptree = "*"
-buildozer = {path = "./buildozer"}
+buildozer = "*"
 
 [dev-packages]
 

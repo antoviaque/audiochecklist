@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "38490704240f0d0abb31c46f6a8ca144b2878eb8a2e81c274d2a49b114e04019"
+            "sha256": "55b3cb49f65f5cfd69555a80674b6ded5868b1bc16372a590f331ddf8a44e40f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -17,8 +17,12 @@
     },
     "default": {
         "buildozer": {
-            "path": "./buildozer",
-            "version": "==1.2.0.dev0"
+            "hashes": [
+                "sha256:987cc4363c4834893bbf1c32547b8afd953a16b92d788a654ca5f89ba197d9ea",
+                "sha256:ec685a53f88789607a43e629f9e25992c9be8824518b00d77ce3092ff7deca75"
+            ],
+            "index": "pypi",
+            "version": "==1.5.0"
         },
         "cachetools": {
             "hashes": [
@@ -560,7 +564,7 @@
                 "sha256:64299f4909223da747622c030b781c0d7811e359c37124b4bd368fb8c6518baa",
                 "sha256:98b1b2782e3c6c4904938b84c0eb932721069dfdb9134313beff7c83c2df24bf"
             ],
-            "markers": "python_version >= '3.7' and python_version < '4.0'",
+            "markers": "python_version >= '3.7' and python_version < '4'",
             "version": "==2.28.2"
         },
         "rsa": {
@@ -576,7 +580,7 @@
                 "sha256:364a25cd2380c3170c46718fe3cc6ffc94b36721e30196a064be508f9b3162f4",
                 "sha256:a6208566c168a47ba46a3b5eeda0c9125091c2335f3cbb29f664519f90feb19f"
             ],
-            "markers": "python_version < '4.0' and python_full_version >= '3.8.1'",
+            "markers": "python_version < '4' and python_full_version >= '3.8.1'",
             "version": "==2.0.2"
         },
         "six": {

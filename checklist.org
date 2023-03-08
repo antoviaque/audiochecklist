@@ -53,11 +53,13 @@
 ** Personal locator on
 ** Start: cloudahoy, camera, audio, skydemon
 ** Parking break off
+** ELT armed
 ** Fuel selector both
 ** Avionics & equipment off
 ** Master battery on
 ** Ammeter discharging 12.5, red light
 ** Circuit breakers in
+** Beacon on
 ** Mixture rich
 ** Carb heat off
 ** Log time
@@ -75,7 +77,7 @@
 ** Alternator on
 ** Ammeter charging 14.5, light off
 ** Ventilation & heaters
-** Beacon, nav & taxi on
+** Lights nav & taxi on
 ** Avionics on
 ** Check 121.5
 ** Radios set
@@ -211,11 +213,12 @@
 #** Docking: Mixture off, mags off & key out
 #** Throttle 0
 #** Water rudders up
-** Lights all off
+** Lights taxi/landing off
 ** RPM idle
 ** Mags check short cut out
 ** Mixture cutoff
 ** Mags off & key out
+** Beacon off
 ** Master & alternator off
 ** Picture of tach & horometers
 ** Log time

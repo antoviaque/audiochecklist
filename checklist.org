@@ -2,10 +2,9 @@
 
 * Pre-flight
 #### Urgent items (frequent source of delay when missing)
-** Equipment check:
-*** chalks
-*** oil
-*** Passenger headset
+** Equipment check: chalks
+** Equipment check: oil
+** Equipment check: passenger headset
 ** Fuel level
 ** Oil level
 ** Pre-airport & checkout checklists
@@ -26,7 +25,7 @@
 #** GPS on
 #** Master on
 ** Fuel gages check
-** Flaps down
+** Flaps down & up by step
 #** Beacon light on, check, off
 #** Master off
 #### Exterior checks
@@ -39,17 +38,16 @@
 *** Fuel caps secured
 *** Fuel sump
 *** Wind visual check
+** Passenger briefing: rails, SAFETY, speak up, headset
 #** Instructor checkin: air work, dmms
 * Start
 #** Engine start & pre-taxi checklist
 ** Seat & belt adjusted
 ** Doors windows locked
 ** Flight controls free & correct
-** Flaps up by step
-** Briefing: 
-*** Radios & navaids
-*** Runway & abort point
-*** Heading
+** Briefing: radios, navaids, winds, runway
+** Briefing: camera/REACT, vspeeds, heading
+** Emergencies: abort point, engine failure plan, vglide
 ** Personal locator on
 ** Start: cloudahoy, camera, audio, skydemon
 ** Parking break off
@@ -91,12 +89,6 @@
 ** Taxi: check brakes, turn coordinator, heading
 #** Nav instruments check
 #** Run-up & pre-takeoff checklist
-** Briefing: 
-*** wind & runway
-*** camera, light, action, react
-*** vspeeds: rotation, vx/vy, vglide
-*** heading
-** Emergencies: abort point, engine failure
 ** Area behind clear
 ** At run-up point: engine instruments green
 ** Brakes set

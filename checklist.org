@@ -8,20 +8,22 @@
 ** Fuel level
 ** Oil level
 ** Pre-airport & checkout checklists
+** Access to flight bag
 #** Empty water from floats
 #### Interior checks
 ** Airplane documents
 ** Aircraft log update
 ** Picture of tach & horometers
-** Control lock off
+#** Control lock off
 ** Fire extinguisher locked, in bracket
 #** Paddle, rope, life vest
 ** Mags off & key removed
 ** Master battery & alternator off
 ** Avionics off
 ** V Bar check
-** Mount tablet & clicker
 ** Mount camera
+** Mount tablet & clicker
+** Check battery level
 #** GPS on
 #** Master on
 ** Fuel gages check
@@ -33,6 +35,7 @@
 *** Pitot cover off
 *** Chocks off
 *** Tires inflated & not worn
+*** Bungee cords
 *** Frost & ice
 *** No leaks: engine & ground
 *** Fuel caps secured
@@ -69,6 +72,7 @@
 ** Brakes set
 ** Area checked
 ** Prop clear
+** Stick full aft
 ** Ignition start & RPM 1000
 #** Water rudder down
 ** Oil pressure min 25PSI within 30s
@@ -127,6 +131,7 @@
 ** Flight controls free
 ** Locate abort point
 ** Camera recording
+** CIGAR
 ** Radio departure
 ** Camera: clearance, area clear
 ** Lights: landing & strobe on, transponder alt
@@ -217,7 +222,7 @@
 ** Stop: skydemon, cloudahoy, camera, audio
 ** Personal locator off
 ** Control lock set
-** Pitot cover set
+** Pitot cover on
 ** Chocks set
 ** Detach clicker
 ** Close flight plan

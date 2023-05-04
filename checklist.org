@@ -7,6 +7,7 @@
 #** Equipment check: passenger headset
 ** Fuel level
 ** Oil level
+** Note oil level & refueling
 ** Pre-airport & checkout checklists
 ** Picture of tach & horometers
 ** Access to flight bag
@@ -101,7 +102,7 @@
 ** RPM 1800
 ** Mags check: max drop 100, diff 50
 ** Mixture check
-** Carb heat on & check drop
+** Carb heat on & min drop 100
 ** Ammeter charging
 ** Engine instruments green
 #** Suction green
@@ -142,8 +143,8 @@
 ** Lights
 ** Transponder ALT
 ** T&Ps
+** Open flight plan
 * Cruise
-#** Open flight plan
 #** RPM 2300
 ** Gas quantity check
 #** Undercarriage

@@ -42,9 +42,12 @@
 *** Fuel sump
 *** Chocks off
 ** Passenger briefing: SAFETY, headset
-** Briefing: radios, winds, runway
-** Briefing: camera/REACT, vspeeds, heading
-** Emergencies: speed at abort point, engine failure plan, vglide
+** Briefing: radios
+** Briefing: winds & runway
+** Briefing: memory items takeoff (camera/REACT, vspeeds)
+** Briefing: pattern & altitude
+** Briefing: air work
+** Emergencies: engine failure plan, vglide
 #** Instructor checkin: air work, dmms
 * Start
 #** Engine start & pre-taxi checklist
@@ -86,6 +89,7 @@
 ** Noise cancelling on
 ** Check & monitor guard 121.5
 ** Radios set
+** GTN configured
 #** Navaids set
 ** Transponder standby 7000
 ** Radio atis & ground
@@ -135,6 +139,7 @@
 ** Locate abort point & remind speed
 #** Camera recording
 #** CIGAR
+** Cabin departure
 ** Radio departure
 ** Camera, light, action, REACT
 ** Power
@@ -186,6 +191,7 @@
 ** Carb heat off
 ** Seat belts locked
 ** Position in seat adjusted
+** Cabin landing
 #** Water rudder up
 #** Base: RPM 1500, flaps 2, pitch 70
 #** Final: RPM idle, flaps 3, pitch 60

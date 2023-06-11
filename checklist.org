@@ -7,7 +7,7 @@
 #** Equipment check: passenger headset
 ** Fuel level
 ** Oil level
-** Note oil level & refueling
+** Tablet battery level
 ** Pre-airport & checkout checklists
 ** Picture of tach & horometers
 ** Access to flight bag
@@ -22,8 +22,6 @@
 ** Master, alternator, avionics off
 ** V Bar check
 #** Mount camera
-** Mount & lock tablet
-** Tablet battery level
 #** GPS on
 #** Master on
 #** Fuel gages check
@@ -48,20 +46,22 @@
 ** Briefing: pattern & altitude
 ** Briefing: air work
 ** Emergencies: engine failure plan, vglide
+** Note oil level & refueling
+** Mount & lock tablet
 #** Instructor checkin: air work, dmms
 * Start
 #** Engine start & pre-taxi checklist
 ** Seat & belt adjusted
 ** Doors windows locked
 ** Flight controls free & correct
+** ELT armed
 ** PLB on
 #** Start audio
 ** Start skydemon
 #** PLB messenging on
 #** Parking break off
-** ELT armed
 ** Fuel both
-** Avionics & equipment off
+** Avionics off
 ** Start timer
 ** Log start time
 ** Master on
@@ -87,6 +87,7 @@
 ** Lights nav & taxi on
 ** Avionics on
 ** Noise cancelling on
+** Bluetooth: connected
 ** Check & monitor guard 121.5
 ** Radios set
 ** GTN configured
@@ -99,140 +100,140 @@
 ** Taxi: check brakes, turn coordinator, heading
 #** Nav instruments check
 * Run-up checklist
-** Area behind clear
-** Engine instruments green
-** Mixture rich
-** Brakes set
-** RPM 1800
+** Area behind: clear
+** Engine instruments: green
+** Mixture: rich
+** Brakes: set
+** RPM: 1800
 ** Mags check: max drop 100, diff 50
-** Mixture check
-** Carb heat on & min drop 100
-** Ammeter charging
-** Engine instruments green
-#** Suction green
-** RPM idle, wait 5 seconds
-** Carb heat off
-** Mixture LOP
+** Mixture: check
+** Carb heat: on & min drop 100
+** Ammeter: charging
+** Engine instruments: green
+#** Suction: green
+** RPM: idle, wait 5 seconds
+** Carb heat: off
+** Mixture: LOP
 * Pre-takeoff
-** Doors windows locked
-** Seat belts locked
-** Flaps 10
-** Trim to takeoff
-** Fuel selector both
-** Fuel quantity check
-** Mixture rich or above 3000 ROP at full throttle
-** Primer locked
-** Circuit breakers in
-#### Instruments check
-** Compass full fluid
-** Artificial horizon
-** Airspeed 0 crosschecked
-** Vertical speed 0 crosschecked
-** Altimeter within 75 feet crosschecked
-** Turn coordinator ball center, full fluid
-** Heading indicator to compass
-#** Heading bug set to runway
-** Carb heat off
-** Mags both
-** Master & alternator on
-** Flight controls free
-** Locate abort point & remind speed
-#** Camera recording
+** Doors windows: locked
+** Seat belts: locked
+** Flaps: 10
+** Trim: takeoff
+** Fuel selector: both
+** Fuel quantity: check
+** Mixture: rich or above 3000 ROP at full throttle
+** Primer: locked
+** Circuit breaker:s in
+#### Instruments: check
+** Compass: full fluid
+** Artificial horizon: level
+** Airspeed: 0 crosschecked
+** Vertical speed: 0 crosschecked
+** Altimeter: within 75 feet crosschecked
+** Turn coordinator: ball center, full fluid
+** Heading indicator: to compass
+#** Heading bug: set to runway
+** Carb heat: off
+** Mags: both
+** Master & alternator: on
+** Flight controls: free
+** Abort point: locate & remind speed
+#** Camera: recording
 #** CIGAR
-** Cabin departure
-** Radio departure
+** Cabin: departure
+** Radio: departure
 ** Camera, light, action, REACT
-** Power
-#** Undercarriage
-** Flaps
-** Lights
-** Transponder ALT
-** T&Ps
-** Open flight plan
+** Power: reduced
+#** Undercarriage: UP
+** Flaps: UP
+** Lights: landing & taxi off
+** Transponder: ALT
+** T&Ps: green
+#** Open flight plan
 * Cruise
 #** RPM 2300
-** Gas quantity check
-#** Undercarriage
-** Mixture LOP
-#** Propeller
-** T&P
-** Emergency landing sites
-** VOR location check
+** Gas: quantity, selector
+#** Undercarriage: UP
+** Mixture: LOP
+#** Propeller: set
+** T&Ps: green
+** Emergency landing sites: located
+#** VOR location check
 #** Heading indicator set to target
 * Pre-maneuver
-** Seat belts locked
-#** Water rudder up
-** Fuel selector both
-** Mixture rich
-** Carb heat off
-** Light landing & strobe on
-** Mags both
+** Seat belts: locked
+#** Water rudder: up
+** Fuel selector: both
+** Mixture: rich
+** Carb heat: off
+** Lights: landing & strobe on
+** Mags: both
 * Landing
-** ATIS
+** ATIS: noted
 #** WLNOT
 ** Landing plan: runway & pattern, vspeeds, abort point, taxi
 #*** Taxi
 #*** Vspeeds
-** Radio
-** Altimeter set
+** Cabin: landing
+** Radio: landing
+** Altimeter: set
 #** Descent & pre-landing checklists
-** RPM 2000 & maintain altitude
-** Carb heat on
-** Breaks free
-#** Undercarriage
-** Mixture rich
-** Mags both
-#** Propeller
-** Fuel selector both
-** Flaps 1
-** Lights taxi & landing on
-** Instruments check
-** T&P
-** Carb heat off
-** Seat belts locked
-** Position in seat adjusted
-** Cabin landing
+** RPM: reduced
+** Carb heat: on
+** Breaks: free
+#** Undercarriage: down
+** Mixture: rich
+** Mags: both
+#** Propeller: set
+** Fuel selector: both
+** Flaps: 10
+** Lights: taxi & landing on
+** Instruments: check
+** T&Ps: green
+#** Carb heat: off
+** Seat belts: locked
+** Position in seat: adjusted
 #** Water rudder up
 #** Base: RPM 1500, flaps 2, pitch 70
 #** Final: RPM idle, flaps 3, pitch 60
 * After landing
 #** Water rudders down
-** Flaps 0
-** Carb heat off
-** Transponder standby
-** Light landing & strobe off
-** Trim takeoff
-** Radio
+** Flaps: 0
+** Carb heat: off
+** Transponder: standby
+** Light: landing & strobe off
+** Trim: takeoff
+** Radio: ground
 * Parking
 #** Engine shutdown checklist
-#** Radio call docking
-#** RPM 1000
-#** Log on block
-** Check guard 121.5
-** Avionics & electronics off
+#** Radio: call docking
+#** RPM: 1000
+#** Log: on block
+** Radio: check guard 121.5
+** Avionics: off
 #** Docking: Mixture off, mags off & key out
-#** Throttle 0
-#** Water rudders up
-** Lights taxi/landing off
-** RPM idle
-** Mags check short cut out
-** Mixture cutoff
-** Mags off & key out
-** Beacon off
-** Master & alternator off
-** Fuel off
-** Log time
-** Picture of tach & horometers
-** Stop skydemon
+#** Throttle: IDLE
+#** Water rudders: up
+** Lights: taxi/landing off
+** RPM: idle
+** Mags: check short cut out
+** Mixture: cutoff
+** Mags: off & key out
+** Beacon: off
+** Master & alternator: off
+** Fuel: off
+** Log: time
+** Tach & horometers: take picture
+** Skydemon: stop
 #** Stop audio
-** Personal locator off
-** Close flight plan
-** Aircraft log update
-** Chocks set
-** Control lock set
-** Pitot cover on
+** Personal locator: off
+** Flight plan: close
+** Aircraft log: update
+** Chocks: set
+** Control lock: set
+** Pitot cover: on
 #** Detach clicker
-** Pack tablet
+** Tablet: pack
 #* Post flight
 #** Debrief
 #*** Dispatch checkin

@@ -70,7 +70,7 @@ class AudioChecklistApp(App):
                 return checklist
 
     def build(self):
-        self.body = BoxLayout(orientation='vertical', spacing=10, width=1600, height=900)
+        self.body = BoxLayout(orientation='vertical', spacing=10, width=800, height=900)
 
         self.build_checklist_selector()
         self.build_checklist_body()
@@ -105,7 +105,7 @@ class AudioChecklistApp(App):
         """
         Layout: Checklist body - list of items
         """
-        self.checklist_items_buttons_box = BoxLayout(orientation='vertical', spacing=10, width=1600)
+        self.checklist_items_buttons_box = BoxLayout(orientation='vertical', spacing=10, width=800)
         self.body.add_widget(self.checklist_items_buttons_box)
         self.reset_checklist_items_buttons()
 

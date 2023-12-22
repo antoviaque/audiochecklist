@@ -6,7 +6,7 @@
 #** Equipment check: oil
 #** Equipment check: passenger headset
 ** Fuel level
-** Oil level
+** Oil level: 4-6
 ** Tablet battery level
 ** Pre-airport & checkout checklists
 ** Flight bag: accessible
@@ -72,8 +72,8 @@
 ** Circuit breakers: in
 ** Beacon: on
 #** Warms
-** Primer: 3-5
-** Throttle: adjusted
+** Primer: 0-3
+** Throttle: 1/4th
 ** Brakes: set
 ** Stick: full aft
 ** Area: checked
@@ -102,16 +102,17 @@
 *** Turn coordinator & heading: checked
 #** Nav instruments check
 * Run-up checklist
+** EGT: 120F
 ** Area behind: clear
 ** Engine instruments: green
 ** Mixture: rich
 ** Brakes: set
-** RPM: 1800
-*** Mags check: max drop 100, diff 50
+** RPM: 2000
+*** Mags check: smooth, max drop 175, diff 50
 *** Mixture: checked
 *** Carb heat: on & min drop 100
 *** Ammeter: charging
-*** T&Ps: green
+*** Oil: 60-90PSI
 #** Suction: green
 *** RPM: idle for 5 seconds
 ** Carb heat: off
@@ -153,12 +154,12 @@
 *** T&Ps: green
 #** Open flight plan
 * Cruise
-#** RPM 2300
+** RPM 2350-2400
 ** Gas: quantity, selector
 #** Undercarriage: UP
 ** Mixture: LOP
 #** Propeller: set
-** T&Ps: green
+** Oil: 180F, max 245F
 ** Emergency landing sites: located
 #** VOR location check
 #** Heading indicator set to target
@@ -174,12 +175,13 @@
 * Landing
 ** ATIS: noted
 #** WLNOT
-** Landing plan: runway & pattern, speeds, abort point, taxi
-#*** Taxi
-#*** Vspeeds
+** Landing plan:
+*** Runway & pattern
+*** Speeds
+*** Abort point
+*** Taxi
 ** Cabin: landing
 ** Radio: landing
-#** QNH: set
 #** Descent & pre-landing checklists
 ** RPM: reduced
 *** Carb heat: open
@@ -195,10 +197,10 @@
 *** Lights: taxi & landing on
 *** Instruments: QNH & heading set
 *** T&Ps: green
-#*** Carb heat: off
+*** Carb heat: off
 *** Hatch & harness: locked
 ** Position in seat: adjusted
-** Base and final turns: carb & flaps set
+** Short final: FCCW
 #** Water rudder up
 #** Base: RPM 1500, flaps 2, pitch 70
 #** Final: RPM idle, flaps 3, pitch 60
@@ -221,7 +223,7 @@
 #** Throttle: IDLE
 #** Water rudders: up
 ** Lights: all off except beacon
-** RPM: idle
+** RPM: idle until CHT drop
 ** Mags: check short cut out
 ** Mixture: cutoff
 ** Mags: off & key out

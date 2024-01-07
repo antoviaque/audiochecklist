@@ -23,6 +23,7 @@
 ** Flaps: down & up by step
 ** Mags: off & key remove
 ** V Bar: check
+** G5 SD-card: in
 ** Master, alternator, avionics: off
 ** Tach & horometers: record
 #** GPS on

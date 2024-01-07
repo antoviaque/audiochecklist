@@ -5,10 +5,12 @@
 #** Equipment check: chalks
 #** Equipment check: oil
 #** Equipment check: passenger headset
+** Camera: mount and record
 ** Fuel level
 ** Oil level: 4-6
 ** Tablet battery level
 ** Headsets battery level
+** Clicker: mount
 ** Pre-airport & checkout checklists
 ** Flight bag: accessible
 #** Empty water from floats
@@ -23,7 +25,6 @@
 ** V Bar: check
 ** Master, alternator, avionics: off
 ** Tach & horometers: record
-#** Mount camera
 #** GPS on
 #** Master on
 #** Fuel gages check
@@ -146,7 +147,6 @@
 *** Flaps: 10
 *** Trim: takeoff
 ** Abort point: locate & remind speed
-#** Camera: record
 ** Cabin: departure
 ** Radio: departure
 ** Camera, light, action, REACT
@@ -245,8 +245,10 @@
 ** Chocks: set
 ** Control lock: set
 ** Pitot cover: on
-#** Detach clicker
+** Detach clicker
 ** Tablet: pack
+** Walkaround: debrief
+** Cameras: unmount
 #* Post flight
 #** Debrief
 #*** Dispatch checkin

@@ -58,7 +58,7 @@
 #** Engine start & pre-taxi checklist
 ** Seat & belt: adjust
 ** Attitude: note
-** Doors windows: lock
+** Doors windows: demonstrate & lock
 ** Controls: free & correct
 ** ELT: arm
 ** PLB: on

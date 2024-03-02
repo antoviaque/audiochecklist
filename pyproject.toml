@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "audiochecklist"
+version = "0.1.0"
+description = "Audio checklist"
+authors = ["Xavier Antoviaque <xavier@antoviaque.org>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Kivy = "*"
+Kivy-examples = "*"
+google-cloud-texttospeech = "*"
+orgparse = "*"
+webdavclient3 = "*"
+ffpyplayer = "*"
+pipdeptree = "*"
+buildozer = "*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

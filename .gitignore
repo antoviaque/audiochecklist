@@ -6,4 +6,5 @@
 archive/
 bin/
 audio/
+__pycache__/
 run.log

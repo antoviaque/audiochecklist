@@ -15,6 +15,7 @@ webdavclient3 = "*"
 ffpyplayer = "*"
 pipdeptree = "*"
 buildozer = "*"
+cython = "^3.0.8"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0.2"

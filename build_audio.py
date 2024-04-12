@@ -13,6 +13,9 @@ from checklist import get_audio_filename, get_all_checklists_items_names
 
 # Globals ###############################################################################
 
+credential_path = "./google-api-auth-text2speech.json"
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credential_path
+
 speech_api = texttospeech.TextToSpeechClient()
 
 

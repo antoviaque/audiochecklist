@@ -28,7 +28,6 @@
 ** Tach & horometers: record
 #** GPS on
 #** Master on
-#** Fuel gages check
 #** Beacon light on, check, off
 #** Master off
 #### Exterior checks
@@ -50,9 +49,12 @@
 *** Pattern & altitude: note
 *** Air work: note
 *** Emergencies (engine failure plan, vglide): remind
-** Oil level & refueling: log
+** Oil & fuel: log
+** Fuel gages: picture
 ** Tablet: lock
-** GTN: load checklist & plan
+** GTN: load card (checklist & plan)
+** GTN: set user waypoints
+** GTN: set user radios
 #** Instructor checkin: air work, dmms
 * Start
 #** Engine start & pre-taxi checklist
@@ -94,10 +96,10 @@
 ** Avionics: on
 *** Noise cancelling: on
 *** Bluetooth: connect
-*** Guard: check & monitor 121.5
-*** Radios: set
 *** GTN: set plan
-#*** Navaids set
+#*** Guard: check & monitor 121.5
+*** Radios: set
+*** Navaids set
 *** Transponder: standby 7000
 *** Radio: atis & ground
 *** Sqwak: set
